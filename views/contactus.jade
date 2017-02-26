@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      h1 #{title}
+      p Contact Form
+        div.content
+          form(action='contactus/send', name='contactus', id='contactus', method='post')
+            fieldset
+              p
+              div.mdl-textfield.mdl-js-textfield
+                label(for='name').mdl-textfield__label Name:
+                br
+                input(name='name', type='text', value='', id='name').mdl-textfield__input
+              p
+              div.mdl-textfield.mdl-js-textfield
+                label(for='email').mdl-textfield__label Email:
+                br
+                input(name='email', type='text', value='', id='email').mdl-textfield__input
+              p
+              div.mdl-textfield.mdl-js-textfield
+                label(for='message').mdl-textfield__label Message:
+                br
+                textarea(name='message', cols='40', rows='10', id='message').mdl-textfield__input
+              p
+              div.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored
+                input(name='submit', type='submit', value='Send', id='submit').mdl-button.mdl-js-button
